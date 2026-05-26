@@ -222,7 +222,7 @@
     .warn-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
     .warn-list li{font-size:12.5px;color:#000000;line-height:1.65;word-break:keep-all;padding-left:14px;position:relative;}
     .warn-list li::before{content:"·";position:absolute;left:0;font-weight:700;}
-    .warn-list li b{color:#B45309;}
+    .warn-list li b{color:#000000;}
     /* SECTION HEAD */
     .section-head{
       display:flex;align-items:center;gap:12px;padding:28px 20px 0;
@@ -681,7 +681,7 @@
 
 <script>
 const stepNames=["신청 폼 접속","상품 선택","개인정보 입력 (신규)","개인정보 입력 (연장)","차량 구매 권한 없음","결제 수단 선택","차량 등록 성"];
-const warnIdx=6;
+const warnIdx=4;
 const total=6;
 let cur=0;
 const track=document.getElementById('cTrack');
