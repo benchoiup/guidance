@@ -29,6 +29,8 @@
       max-width:480px;
       margin:0 auto;
       -webkit-font-smoothing:antialiased;
+      -webkit-text-size-adjust:100%;
+     overflow-x:hidden;
     }
     .topbar{
       position:sticky;top:0;z-index:100;
@@ -110,7 +112,8 @@
     .c-track{display:flex;transition:transform .32s cubic-bezier(.4,0,.2,1);will-change:transform;}
     .slide{min-width:100%;padding:0 16px;}
     .slide-card{background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,.06);}
-    .slide-img{width:100%;display:block;object-fit:contain;background:#f8f9fa;}
+    .slide-img-wrap{height:320px;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;background:#f8f9fa;display:block;}
+    .slide-img{width:100%;height:auto;display:block;}
     .slide-caption{padding:16px 18px 18px;border-top:1px solid var(--border);}
     .slide-caption .c-step{font-size:10.5px;font-weight:700;color:var(--blue);letter-spacing:.8px;margin-bottom:5px;}
     .slide-caption .c-title{font-size:15px;font-weight:800;color:var(--text);margin-bottom:6px;}
@@ -220,7 +223,9 @@
 
       <div class="slide">
         <div class="slide-card">
-          <img class="slide-img" src="step1.jpg" alt="결제 단계에서 정기 결제 선택"/>
+          <div class="slide-img-wrap">  
+            <img class="slide-img" src="step1.jpg" alt="결제 단계에서 정기 결제 선택"/>
+          </div>
           <div class="slide-caption">
             <div class="c-step">STEP 1</div>
             <div class="c-title">정기 결제 선택</div>
@@ -232,7 +237,9 @@
 
       <div class="slide">
         <div class="slide-card">
-          <img class="slide-img" src="step2.jpg" alt="결제 정보 확인"/>
+          <div class="slide-img-wrap">   
+              <img class="slide-img" src="step2.jpg" alt="결제 정보 확인"/>
+          </div> 
           <div class="slide-caption">
             <div class="c-step">STEP 2</div>
             <div class="c-title">결제 정보 확인</div>
@@ -244,8 +251,10 @@
 
       <div class="slide">
         <div class="slide-card">
-          <img class="slide-img" src="step3.jpg" alt="정기빌링 신청 페이지 이동"/>
-          <div class="slide-caption">
+          <div class="slide-img-wrap">  
+            <img class="slide-img" src="step3.jpg" alt="정기빌링 신청 페이지 이동"/>
+          </div>
+            <div class="slide-caption">
             <div class="c-step">STEP 3</div>
             <div class="c-title">정기빌링 신청 페이지 이동</div>
             <div class="c-desc">결제 완료 후 자동으로 정기빌링 신청 페이지로 이동됩니다. 신청 정보를 확인하세요.</div>
@@ -256,7 +265,9 @@
 
       <div class="slide">
         <div class="slide-card">
-          <img class="slide-img" src="step4.jpg" alt="개인정보 및 차량번호 입력"/>
+          <div class="slide-img-wrap">  
+            <img class="slide-img" src="step4.jpg" alt="개인정보 및 차량번호 입력"/>
+          </div>  
           <div class="slide-caption">
             <div class="c-step">STEP 4</div>
             <div class="c-title">개인정보 및 차량번호 입력</div>
@@ -268,7 +279,9 @@
 
       <div class="slide">
         <div class="slide-card">
+          <div class="slide-img-wrap">  
           <img class="slide-img" src="step5.jpg" alt="카드 등록"/>
+          </div>
           <div class="slide-caption">
             <div class="c-step">STEP 5</div>
             <div class="c-title">카드 등록 (Toss Payments)</div>
@@ -280,7 +293,9 @@
 
       <div class="slide">
         <div class="slide-card">
-          <img class="slide-img" src="step6.jpg" alt="정기빌링 등록 완료"/>
+          <div class="slide-img-wrap">  
+            <img class="slide-img" src="step6.jpg" alt="정기빌링 등록 완료"/>
+          </div>
           <div class="slide-caption">
             <div class="c-step">STEP 6</div>
             <div class="c-title">정기빌링 등록 완료</div>
@@ -292,7 +307,9 @@
 
       <div class="slide slide-cancel">
         <div class="slide-card">
-          <img class="slide-img" src="step7.jpg" alt="정기 결제 취소"/>
+          <div class="slide-img-wrap">  
+            <img class="slide-img" src="step7.jpg" alt="정기 결제 취소"/>
+          </div>
           <div class="slide-caption">
             <div class="c-step">취소 방법</div>
             <div class="c-title">정기 결제 취소</div>
