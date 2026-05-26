@@ -217,7 +217,7 @@
     }
     .warn-title{
       display:flex;align-items:center;gap:6px;
-      font-size:13px;font-weight:700;color:#92400E;margin-bottom:10px;
+      font-size:15px;font-weight:700;color:#92400E;margin-bottom:10px;
     }
     .warn-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
     .warn-list li{font-size:12.5px;color:#000000;line-height:1.65;word-break:keep-all;padding-left:14px;position:relative;}
@@ -253,7 +253,7 @@
     .c-track{display:flex;transition:transform .32s cubic-bezier(.4,0,.2,1);will-change:transform;}
     .slide{min-width:100%;padding:0 16px;}
     .slide-card{background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,.06);}
-    .slide-img-wrap{height:440px;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;background:#f8f9fa;display:block;}
+    .slide-img-wrap{height:540px;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;background:#f8f9fa;display:block;}
     .slide-img{width:100%;height:auto;display:block;}
     .slide-caption{padding:14px 18px 16px;border-top:1px solid var(--border);}
     .c-step{font-size:10.5px;font-weight:700;color:var(--blue);letter-spacing:.8px;margin-bottom:5px;}
@@ -299,7 +299,7 @@
       width:50px;height:50px;border-radius:50%;
       background:rgba(255,255,255,.2);
       display:flex;align-items:center;justify-content:center;
-      color:#fff;font-size:16px;flex-shrink:0;
+      color:#fff;font-size:20px;flex-shrink:0;
     }
     /* CANCEL */
     .cancel-wrap{padding:20px 16px 0;}
@@ -499,7 +499,7 @@
       <div class="num" id="stepNum">1</div>
       <div class="name" id="stepName">신청 폼 접속</div>
     </div>
-    <div class="step-count"><span id="curIdx">1</span> / 9</div>
+    <div class="step-count"><span id="curIdx">1</span> / 7</div>
   </div>
   <div class="progress-bar-wrap">
     <div class="progress-bar-bg">
@@ -680,7 +680,7 @@
 </div>
 
 <script>
-const stepNames=["신청 폼 접속","상품 선택","개인정보 입력 (신규)","개인정보 입력 (연장)","차량 구매 권한 없음","결제 수단 선택","차량 등록 성"];
+const stepNames=["신청 폼 접속","상품 선택","개인정보 입력 (신규)","개인정보 입력 (연장)","차량 구매 권한 없음","결제 수단 선택","차량 등록 성공"];
 const warnIdx=4;
 const total=7;
 let cur=0;
