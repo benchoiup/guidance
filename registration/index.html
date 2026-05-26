@@ -596,7 +596,7 @@
       <div class="slide">
         <div class="slide-card">
           <div class="slide-img-wrap">
-            <img class="slide-img" src="reg8.jpg" alt="결제 완료"/>
+            <img class="slide-img" src="reg7.jpg" alt="결제 완료"/>
           </div>
           <div class="slide-caption">
             <div class="c-step">STEP 6</div>
@@ -709,6 +709,29 @@ function ui(){
 }
 function goTo(i){cur=Math.max(0,Math.min(total-1,i));ui();}
 function move(d){goTo(cur+d);}
+
+function toggleAgree(){
+  const cb = document.getElementById('agreeCheck');
+  cb.checked = !cb.checked;
+  document.getElementById('agreeRow').classList.toggle('checked', cb.checked);
+  document.getElementById('agreeError').style.display = 'none';
+}
+// ── POPUP ──
+function closePopup(){
+  const agreed = document.getElementById('agreeCheck').checked;
+  if(!agreed){
+    document.getElementById('agreeError').style.display='flex';
+    return;
+  }
+  document.getElementById('termsPopup').style.display='none';
+  document.body.style.overflow='';
+}
+window.addEventListener('DOMContentLoaded',()=>{
+  document.body.style.overflow='hidden';
+  document.getElementById('agreeCheck').addEventListener('change',function(){
+    document.getElementById('agreeError').style.display = this.checked ? 'none' : 'flex';
+  });
+});
 
 let sx=0,sy=0,drag=false,dx=0;
 outer.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY;drag=true;dx=0;},{passive:true});
