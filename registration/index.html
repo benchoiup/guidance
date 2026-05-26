@@ -213,14 +213,14 @@
     .warn-wrap{padding:16px 16px 0;}
     .warn-card{
       background:#FFFFFF;border-radius:var(--r);
-      padding:16px;border:1.5px solid #000000;
+      padding:16px;border:1.5px solid var(--border);
     }
     .warn-title{
       display:flex;align-items:center;gap:6px;
       font-size:13px;font-weight:700;color:#92400E;margin-bottom:10px;
     }
     .warn-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
-    .warn-list li{font-size:12.5px;color:#78350F;line-height:1.65;word-break:keep-all;padding-left:14px;position:relative;}
+    .warn-list li{font-size:12.5px;color:#000000;line-height:1.65;word-break:keep-all;padding-left:14px;position:relative;}
     .warn-list li::before{content:"·";position:absolute;left:0;font-weight:700;}
     .warn-list li b{color:#B45309;}
     /* SECTION HEAD */
@@ -390,7 +390,7 @@
   <div class="label"> 이용 안내 </div> 
   <h1>차량 등록 신청 방법</h1>
   <p>사용하시는 동에 맞는 링크로 접속해<br/>
-  신청 양식을 작성하시면 됩니다.</p>
+  신청 양식을 작성 후 제출해 주시면 됩니다.</p>
 </div>
 
 <!-- 신청 링크 -->
@@ -680,7 +680,7 @@
 </div>
 
 <script>
-const stepNames=["신청 폼 접속","상품 선택","무료 차량 신청","개인정보 입력 (신규)","개인정보 입력 (연장)","시작일 선택 후 신청","차량 구매 권한 없음","결제 수단 선택","카드 결제"];
+const stepNames=["신청 폼 접속","상품 선택","개인정보 입력 (신규)","개인정보 입력 (연장)","차량 구매 권한 없음","결제 수단 선택","차량 등록 성"];
 const warnIdx=6;
 const total=9;
 let cur=0;
