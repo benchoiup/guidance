@@ -8,9 +8,9 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     :root{
-      --blue:#3182F6;
-      --blue-dark:#1B64DA;
-      --blue-bg:#EEF4FF;
+      --blue:#3564D2;
+      --blue-dark:#244DB3;
+      --blue-bg:#EEF3FF;
       --red:#F04452;
       --green:#00C471;
       --bg:#F2F4F6;
@@ -44,18 +44,30 @@
     .topbar svg{width:22px;height:22px;flex-shrink:0;}
     .topbar h2{font-size:16px;font-weight:700;color:var(--text);}
     .hero{
-      background:var(--card);
-      padding:28px 20px 24px;
-      border-bottom:1px solid var(--border);
+      background:linear-gradient(150deg,#0E2E8D 0%,#3564D2 100%);
+      padding:40px 20px 34px;
+      text-align:center;
+      border-bottom:none;
     }
     .hero .label{
-      display:inline-flex;align-items:center;gap:5px;
-      font-size:11px;font-weight:700;letter-spacing:.5px;
-      color:var(--blue);background:var(--blue-bg);
-      padding:4px 10px;border-radius:100px;margin-bottom:12px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:5px;
+      background:rgba(255,255,255,0.15);
+      border:1px solid rgba(255,255,255,0.25);
+      color:rgba(255,255,255,0.9);
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.5px;
+      padding:4px 10px;
+      border-radius:100px;
+      margin-bottom:14px;
     }
-    .hero h1{font-size:22px;font-weight:800;color:var(--text);line-height:1.35;margin-bottom:20px;}
-    .hero p{font-size:13.5px;color:var(--sub);line-height:1.75;word-break:keep-all;}
+
+  .hero h1{color:#fff; font-size:22px; font-weight:800; line-height:1.35; margin-bottom:18px;}
+  .hero p{color:rgba(255,255,255,0.82); font-size:13.5px; line-height:1.75; word-break:keep-all;}
+  .hero p strong{color:#fff;}
     .info-wrap{padding:20px 16px 0;}
     .info-card{
       background:var(--card);border-radius:var(--r);
