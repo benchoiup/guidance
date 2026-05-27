@@ -246,7 +246,7 @@
       <div class="num" id="stepNum">1</div>
       <div class="name" id="stepName">결제 단계에서 정기 결제 선택</div>
     </div>
-    <div class="step-count"><span id="curIdx">1</span> / 7</div>
+    <div class="step-count"><span id="curIdx">1</span> / 6</div>
   </div>
 
   <div class="progress-bar-wrap">
@@ -421,6 +421,7 @@ function ui(){
   document.getElementById('stepNum').textContent=cur===5?'✕':cur+1;
   document.getElementById('stepName').textContent=stepNames[cur];
   document.getElementById('curIdx').textContent=cur+1;
+  document.getElementById('totalIdx').textContent = total;
   fill.style.width=`${((cur+1)/total)*100}%`;
   prevBtn.disabled=cur===0;
   nextBtn.disabled=cur===total-1;
