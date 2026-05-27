@@ -54,17 +54,12 @@
     .hero .label{
       display:inline-flex;
       align-items:center;
-      justify-content:center;
-      gap:5px;
+      justify-content:center;    
       background:rgba(255,255,255,0.15);
       border:1px solid rgba(255,255,255,0.25);
       color:rgba(255,255,255,0.9);
-      font-size:11px;
-      font-weight:700;
-      letter-spacing:.5px;
-      padding:4px 10px;
-      border-radius:100px;
-      margin-bottom:14px;
+      font-size:11px;font-weight:700;letter-spacing:.5px;
+      padding:4px 12px;border-radius:20px;margin-bottom:14px;
     }
 
   .hero h1{color:#fff; font-size:22px; font-weight:800; line-height:1.35; margin-bottom:18px;}
@@ -256,7 +251,7 @@
 
   <div class="progress-bar-wrap">
     <div class="progress-bar-bg">
-      <div class="progress-bar-fill" id="progressFill" style="width:14.28%"></div>
+      <div class="progress-bar-fill" id="progressFill" style="width:16.66%"></div>
     </div>
   </div>
 
@@ -279,25 +274,11 @@
 
       <div class="slide">
         <div class="slide-card">
-          <div class="slide-img-wrap">   
-              <img class="slide-img" src="step2.jpg" alt="결제 정보 확인"/>
-          </div> 
-          <div class="slide-caption">
-            <div class="c-step">STEP 2</div>
-            <div class="c-title">결제 정보 확인</div>
-            <div class="c-desc">결제 금액을 확인하고, 결제 방법을 선택한 뒤 <b>다음</b>을 누릅니다.</div>
-            <div class="c-tag blue">✉️ 이메일 선택 입력</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="slide">
-        <div class="slide-card">
           <div class="slide-img-wrap">  
             <img class="slide-img" src="step3.jpg" alt="정기빌링 신청 페이지 이동"/>
           </div>
             <div class="slide-caption">
-            <div class="c-step">STEP 3</div>
+            <div class="c-step">STEP 2</div>
             <div class="c-title">정기빌링 신청 페이지 이동</div>
             <div class="c-desc">결제 완료 후 자동으로 정기빌링 신청 페이지로 이동됩니다. 신청 정보를 확인하세요.</div>
             <div class="c-tag green">✅ 자동 이동됨</div>
@@ -311,7 +292,7 @@
             <img class="slide-img" src="step4.jpg" alt="개인정보 및 차량번호 입력"/>
           </div>  
           <div class="slide-caption">
-            <div class="c-step">STEP 4</div>
+            <div class="c-step">STEP 3</div>
             <div class="c-title">개인정보 및 차량번호 입력</div>
             <div class="c-desc">이름·연락처·차량번호를 입력하고 <b>'다음으로 (정기 자동결제 동의)'</b>를 누릅니다.</div>
             <div class="c-tag blue">📝 필수 입력 항목</div>
@@ -325,7 +306,7 @@
           <img class="slide-img" src="step5.jpg" alt="카드 등록"/>
           </div>
           <div class="slide-caption">
-            <div class="c-step">STEP 5</div>
+            <div class="c-step">STEP 4</div>
             <div class="c-title">카드 등록 (Toss Payments)</div>
             <div class="c-desc">카드번호와 유효기간을 입력해 등록합니다. </div>
             <div class="c-tag blue">🔒 Toss Payments 보안 결제</div>
@@ -339,7 +320,7 @@
             <img class="slide-img" src="step6.jpg" alt="정기빌링 등록 완료"/>
           </div>
           <div class="slide-caption">
-            <div class="c-step">STEP 6</div>
+            <div class="c-step">STEP 5</div>
             <div class="c-title">정기빌링 등록 완료</div>
             <div class="c-desc">등록이 완료되면 완료 화면이 표시됩니다. 이후 <b>매월 같은 날 자동 결제</b>됩니다.</div>
             <div class="c-tag green">🎉 등록 완료</div>
@@ -437,7 +418,7 @@ for(let i=0;i<total;i++){
 function ui(){
   track.style.transform=`translateX(-${cur*100}%)`;
   document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===cur));
-  document.getElementById('stepNum').textContent=cur===6?'✕':cur+1;
+  document.getElementById('stepNum').textContent=cur===5?'✕':cur+1;
   document.getElementById('stepName').textContent=stepNames[cur];
   document.getElementById('curIdx').textContent=cur+1;
   fill.style.width=`${((cur+1)/total)*100}%`;
